@@ -20,6 +20,7 @@ flatness = 1.0
 gravity = Vector3( 0, 0, 0 )
 initial_velocity = 100.0
 initial_velocity_random = 1.0
+angular_velocity = -6.35412e-017
 orbit_velocity = 0.0
 orbit_velocity_random = 0.0
 radial_accel = 100.0

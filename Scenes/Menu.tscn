@@ -1,17 +1,18 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Scripts/Menu.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Images/MinBarn.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Images/ExitButton.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Images/MapleScotLogo.png" type="Texture" id=4]
-[ext_resource path="res://Assets/Images/button_normal.png" type="Texture" id=5]
-[ext_resource path="res://Assets/Images/button_highlight.png" type="Texture" id=6]
-[ext_resource path="res://Assets/fonts/bubblegum.tres" type="DynamicFont" id=7]
-[ext_resource path="res://Scenes/PlayerEntry.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Assets/Images/MinPinkSheep.png" type="Texture" id=9]
-[ext_resource path="res://Assets/Images/MinYellowSheep.png" type="Texture" id=10]
-[ext_resource path="res://Assets/Images/MinBlueSheep.png" type="Texture" id=11]
-[ext_resource path="res://Assets/Images/MinGreenSheep.png" type="Texture" id=12]
+[ext_resource path="res://Assets/Images/MapleScotLogo_highlight.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Images/button_normal.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Images/button_highlight.png" type="Texture" id=7]
+[ext_resource path="res://Assets/fonts/bubblegum.tres" type="DynamicFont" id=8]
+[ext_resource path="res://Scenes/PlayerEntry.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Assets/Images/MinPinkSheep.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Images/MinYellowSheep.png" type="Texture" id=11]
+[ext_resource path="res://Assets/Images/MinBlueSheep.png" type="Texture" id=12]
+[ext_resource path="res://Assets/Images/MinGreenSheep.png" type="Texture" id=13]
 
 [node name="Node2D" type="Node2D"]
 scale = Vector2( 0.5, 0.5 )
@@ -38,6 +39,7 @@ margin_right = 1077.42
 margin_bottom = 1190.97
 rect_scale = Vector2( 0.5, 0.5 )
 texture_normal = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
 
 [node name="StartButton" type="TextureButton" parent="."]
 margin_left = 224.0
@@ -45,8 +47,8 @@ margin_top = 1850.0
 margin_right = 1266.0
 margin_bottom = 2016.0
 mouse_default_cursor_shape = 2
-texture_normal = ExtResource( 5 )
-texture_hover = ExtResource( 6 )
+texture_normal = ExtResource( 6 )
+texture_hover = ExtResource( 7 )
 expand = true
 stretch_mode = 6
 
@@ -55,7 +57,7 @@ margin_right = 521.0
 margin_bottom = 97.0
 rect_scale = Vector2( 2, 2 )
 size_flags_vertical = 1
-custom_fonts/font = ExtResource( 7 )
+custom_fonts/font = ExtResource( 8 )
 custom_colors/font_color = Color( 0.52549, 0.509804, 0.788235, 1 )
 text = "start"
 align = 1
@@ -69,20 +71,20 @@ margin_bottom = 1802.0
 custom_constants/separation = 10
 alignment = 1
 
-[node name="PinkPlayer" parent="VBoxContainer" instance=ExtResource( 8 )]
-playerImage = ExtResource( 9 )
-
-[node name="YellowPlayer" parent="VBoxContainer" instance=ExtResource( 8 )]
-position = Vector2( 0, 180 )
+[node name="PinkPlayer" parent="VBoxContainer" instance=ExtResource( 9 )]
 playerImage = ExtResource( 10 )
 
-[node name="BluePlayer" parent="VBoxContainer" instance=ExtResource( 8 )]
-position = Vector2( 0, 360 )
+[node name="YellowPlayer" parent="VBoxContainer" instance=ExtResource( 9 )]
+position = Vector2( 0, 180 )
 playerImage = ExtResource( 11 )
 
-[node name="GreenPlayer" parent="VBoxContainer" instance=ExtResource( 8 )]
-position = Vector2( 0, 540 )
+[node name="BluePlayer" parent="VBoxContainer" instance=ExtResource( 9 )]
+position = Vector2( 0, 360 )
 playerImage = ExtResource( 12 )
+
+[node name="GreenPlayer" parent="VBoxContainer" instance=ExtResource( 9 )]
+position = Vector2( 0, 540 )
+playerImage = ExtResource( 13 )
 
 [connection signal="pressed" from="ExitButton" to="." method="_on_ExitButton_pressed"]
 [connection signal="pressed" from="AboutButton" to="." method="_on_AboutButton_pressed"]

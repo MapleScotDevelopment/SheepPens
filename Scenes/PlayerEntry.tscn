@@ -23,11 +23,11 @@ texture = ExtResource( 3 )
 stretch_mode = 1
 
 [node name="CheckBox" type="CheckBox" parent="Panel"]
-margin_left = 165.0
-margin_top = 25.0
-margin_right = 24.0
-margin_bottom = 24.0
-rect_scale = Vector2( 5, 5 )
+margin_left = 145.0
+margin_top = 13.0
+margin_right = 193.0
+margin_bottom = 61.0
+rect_scale = Vector2( 3, 3 )
 
 [node name="LineEdit" type="LineEdit" parent="Panel"]
 margin_left = 275.0
