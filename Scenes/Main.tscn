@@ -1,0 +1,647 @@
+[gd_scene load_steps=27 format=2]
+
+[ext_resource path="res://Scripts/main.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Images/minboard.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Images/fenceInvisible.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Images/fencePress.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Images/fenceHigh.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Images/fence.png" type="Texture" id=6]
+[ext_resource path="res://Scenes/Pen.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/BoardPlayer.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Assets/Images/MinPinkSheep.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Images/MinBorgSheep.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Images/MinGreenSheep.png" type="Texture" id=11]
+[ext_resource path="res://Assets/Images/MinYellowSheep.png" type="Texture" id=12]
+[ext_resource path="res://Assets/Images/MinBlueSheep.png" type="Texture" id=13]
+[ext_resource path="res://Assets/fonts/bubblegum.tres" type="DynamicFont" id=14]
+[ext_resource path="res://Scenes/Menu.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Scenes/Spin.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Scenes/GameOver.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Scripts/TitleText.gd" type="Script" id=18]
+[ext_resource path="res://Assets/badsheep_spriteframes.tres" type="SpriteFrames" id=19]
+[ext_resource path="res://Scripts/BadSheep.gd" type="Script" id=20]
+[ext_resource path="res://Assets/Sounds/sheep_bleat.wav" type="AudioStream" id=21]
+[ext_resource path="res://Assets/Images/spotlight.png" type="Texture" id=22]
+[ext_resource path="res://Scenes/MessageDialog.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Assets/Sounds/UI_Click_Tap_Knock_Subtle_Dark_mono.wav" type="AudioStream" id=24]
+[ext_resource path="res://Assets/Images/fenceSide.png" type="Texture" id=25]
+[ext_resource path="res://Scenes/About.tscn" type="PackedScene" id=26]
+
+[node name="Main" type="Node2D"]
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 1 )
+
+[node name="board" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 1800, 1012.5 )
+texture = ExtResource( 2 )
+
+[node name="FenceH00" type="TextureButton" parent="board"]
+margin_left = -1270.0
+margin_top = -810.0
+margin_right = -820.0
+margin_bottom = -735.0
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
+texture_disabled = ExtResource( 6 )
+
+[node name="FenceV00" type="TextureButton" parent="board"]
+margin_left = -1278.0
+margin_top = -760.0
+margin_right = -828.0
+margin_bottom = -685.0
+rect_rotation = 90.0
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
+texture_disabled = ExtResource( 6 )
+
+[node name="FenceV10" type="TextureButton" parent="board"]
+margin_left = -1278.0
+margin_top = -224.0
+margin_right = -828.0
+margin_bottom = -149.0
+rect_rotation = 90.0
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
+texture_disabled = ExtResource( 6 )
+
+[node name="FenceV20" type="TextureButton" parent="board"]
+margin_left = -1278.0
+margin_top = 296.0
+margin_right = -828.0
+margin_bottom = 371.0
+rect_rotation = 90.0
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
+texture_disabled = ExtResource( 6 )
+
+[node name="FenceV01" type="TextureButton" parent="board"]
+margin_left = -758.0
+margin_top = -760.0
+margin_right = -308.0
+margin_bottom = -685.0
+rect_rotation = 90.0
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
+texture_disabled = ExtResource( 6 )
+
+[node name="FenceV11" type="TextureButton" parent="board"]
+margin_left = -758.0
+margin_top = -224.0
+margin_right = -308.0
+margin_bottom = -149.0
+rect_rotation = 90.0
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
+texture_disabled = ExtResource( 6 )
+
+[node name="FenceV21" type="TextureButton" parent="board"]
+margin_left = -758.0
+margin_top = 296.0
+margin_right = -308.0
+margin_bottom = 371.0
+rect_rotation = 90.0
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
+texture_disabled = ExtResource( 6 )
+
+[node name="FenceV02" type="TextureButton" parent="board"]
+margin_left = -234.0
+margin_top = -760.0
+margin_right = 216.0
+margin_bottom = -685.0
+rect_rotation = 90.0
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
+texture_disabled = ExtResource( 6 )
+
+[node name="FenceV12" type="TextureButton" parent="board"]
+margin_left = -234.0
+margin_top = -224.0
+margin_right = 216.0
+margin_bottom = -149.0
+rect_rotation = 90.0
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
+texture_disabled = ExtResource( 6 )
+
+[node name="FenceV22" type="TextureButton" parent="board"]
+margin_left = -234.0
+margin_top = 296.0
+margin_right = 216.0
+margin_bottom = 371.0
+rect_rotation = 90.0
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
+texture_disabled = ExtResource( 6 )
+
+[node name="FenceV03" type="TextureButton" parent="board"]
+margin_left = 290.0
+margin_top = -760.0
+margin_right = 740.0
+margin_bottom = -685.0
+rect_rotation = 90.0
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
+texture_disabled = ExtResource( 6 )
+
+[node name="FenceV13" type="TextureButton" parent="board"]
+margin_left = 290.0
+margin_top = -224.0
+margin_right = 740.0
+margin_bottom = -149.0
+rect_rotation = 90.0
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
+texture_disabled = ExtResource( 6 )
+
+[node name="FenceV23" type="TextureButton" parent="board"]
+margin_left = 290.0
+margin_top = 296.0
+margin_right = 740.0
+margin_bottom = 371.0
+rect_rotation = 90.0
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
+texture_disabled = ExtResource( 6 )
+
+[node name="FenceV04" type="TextureButton" parent="board"]
+margin_left = 816.0
+margin_top = -760.0
+margin_right = 1266.0
+margin_bottom = -685.0
+rect_rotation = 90.0
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
+texture_disabled = ExtResource( 6 )
+
+[node name="FenceV14" type="TextureButton" parent="board"]
+margin_left = 816.0
+margin_top = -224.0
+margin_right = 1266.0
+margin_bottom = -149.0
+rect_rotation = 90.0
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
+texture_disabled = ExtResource( 6 )
+
+[node name="FenceV24" type="TextureButton" parent="board"]
+margin_left = 816.0
+margin_top = 296.0
+margin_right = 1266.0
+margin_bottom = 371.0
+rect_rotation = 90.0
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
+texture_disabled = ExtResource( 6 )
+
+[node name="FenceV05" type="TextureButton" parent="board"]
+margin_left = 1336.0
+margin_top = -760.0
+margin_right = 1786.0
+margin_bottom = -685.0
+rect_rotation = 90.0
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
+texture_disabled = ExtResource( 6 )
+
+[node name="FenceV15" type="TextureButton" parent="board"]
+margin_left = 1336.0
+margin_top = -224.0
+margin_right = 1786.0
+margin_bottom = -149.0
+rect_rotation = 90.0
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
+texture_disabled = ExtResource( 6 )
+
+[node name="FenceV25" type="TextureButton" parent="board"]
+margin_left = 1336.0
+margin_top = 296.0
+margin_right = 1786.0
+margin_bottom = 371.0
+rect_rotation = 90.0
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
+texture_disabled = ExtResource( 6 )
+
+[node name="FenceH10" type="TextureButton" parent="board"]
+margin_left = -1270.0
+margin_top = -294.0
+margin_right = -820.0
+margin_bottom = -219.0
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
+texture_disabled = ExtResource( 6 )
+
+[node name="FenceH20" type="TextureButton" parent="board"]
+margin_left = -1270.0
+margin_top = 226.0
+margin_right = -820.0
+margin_bottom = 301.0
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
+texture_disabled = ExtResource( 6 )
+
+[node name="FenceH30" type="TextureButton" parent="board"]
+margin_left = -1270.0
+margin_top = 748.0
+margin_right = -820.0
+margin_bottom = 823.0
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
+texture_disabled = ExtResource( 6 )
+
+[node name="FenceH01" type="TextureButton" parent="board"]
+margin_left = -734.0
+margin_top = -811.0
+margin_right = -284.0
+margin_bottom = -736.0
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
+texture_disabled = ExtResource( 6 )
+
+[node name="FenceH11" type="TextureButton" parent="board"]
+margin_left = -734.0
+margin_top = -294.0
+margin_right = -284.0
+margin_bottom = -219.0
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
+texture_disabled = ExtResource( 6 )
+
+[node name="FenceH21" type="TextureButton" parent="board"]
+margin_left = -734.0
+margin_top = 230.0
+margin_right = -284.0
+margin_bottom = 305.0
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
+texture_disabled = ExtResource( 6 )
+
+[node name="FenceH31" type="TextureButton" parent="board"]
+margin_left = -734.0
+margin_top = 748.0
+margin_right = -284.0
+margin_bottom = 823.0
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
+texture_disabled = ExtResource( 6 )
+
+[node name="FenceH02" type="TextureButton" parent="board"]
+margin_left = -218.0
+margin_top = -811.0
+margin_right = 232.0
+margin_bottom = -736.0
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
+texture_disabled = ExtResource( 6 )
+
+[node name="FenceH12" type="TextureButton" parent="board"]
+margin_left = -218.0
+margin_top = -294.0
+margin_right = 232.0
+margin_bottom = -219.0
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
+texture_disabled = ExtResource( 6 )
+
+[node name="FenceH22" type="TextureButton" parent="board"]
+margin_left = -218.0
+margin_top = 230.0
+margin_right = 232.0
+margin_bottom = 305.0
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
+texture_disabled = ExtResource( 6 )
+
+[node name="FenceH32" type="TextureButton" parent="board"]
+margin_left = -218.0
+margin_top = 748.0
+margin_right = 232.0
+margin_bottom = 823.0
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
+texture_disabled = ExtResource( 6 )
+
+[node name="FenceH03" type="TextureButton" parent="board"]
+margin_left = 302.0
+margin_top = -811.0
+margin_right = 752.0
+margin_bottom = -736.0
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
+texture_disabled = ExtResource( 6 )
+
+[node name="FenceH13" type="TextureButton" parent="board"]
+margin_left = 302.0
+margin_top = -294.0
+margin_right = 752.0
+margin_bottom = -219.0
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
+texture_disabled = ExtResource( 6 )
+
+[node name="FenceH23" type="TextureButton" parent="board"]
+margin_left = 302.0
+margin_top = 230.0
+margin_right = 752.0
+margin_bottom = 305.0
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
+texture_disabled = ExtResource( 6 )
+
+[node name="FenceH33" type="TextureButton" parent="board"]
+margin_left = 302.0
+margin_top = 748.0
+margin_right = 752.0
+margin_bottom = 823.0
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
+texture_disabled = ExtResource( 6 )
+
+[node name="FenceH04" type="TextureButton" parent="board"]
+margin_left = 822.0
+margin_top = -811.0
+margin_right = 1272.0
+margin_bottom = -736.0
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
+texture_disabled = ExtResource( 6 )
+
+[node name="FenceH14" type="TextureButton" parent="board"]
+margin_left = 822.0
+margin_top = -294.0
+margin_right = 1272.0
+margin_bottom = -219.0
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
+texture_disabled = ExtResource( 6 )
+
+[node name="FenceH24" type="TextureButton" parent="board"]
+margin_left = 822.0
+margin_top = 230.0
+margin_right = 1272.0
+margin_bottom = 305.0
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
+texture_disabled = ExtResource( 6 )
+
+[node name="FenceH34" type="TextureButton" parent="board"]
+margin_left = 822.0
+margin_top = 748.0
+margin_right = 1272.0
+margin_bottom = 823.0
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
+texture_disabled = ExtResource( 6 )
+
+[node name="Pen00" parent="board" instance=ExtResource( 7 )]
+visible = false
+position = Vector2( -1044, -522 )
+
+[node name="Pen10" parent="board" instance=ExtResource( 7 )]
+visible = false
+position = Vector2( -1044, -2 )
+
+[node name="Pen20" parent="board" instance=ExtResource( 7 )]
+visible = false
+position = Vector2( -1042, 522 )
+
+[node name="Pen01" parent="board" instance=ExtResource( 7 )]
+visible = false
+position = Vector2( -520, -522 )
+
+[node name="Pen02" parent="board" instance=ExtResource( 7 )]
+visible = false
+position = Vector2( 2, -522 )
+
+[node name="Pen03" parent="board" instance=ExtResource( 7 )]
+visible = false
+position = Vector2( 530, -522 )
+
+[node name="Pen04" parent="board" instance=ExtResource( 7 )]
+visible = false
+position = Vector2( 1052, -522 )
+
+[node name="Pen11" parent="board" instance=ExtResource( 7 )]
+visible = false
+position = Vector2( -520, 2 )
+
+[node name="Pen12" parent="board" instance=ExtResource( 7 )]
+visible = false
+position = Vector2( 2, -2 )
+
+[node name="Pen13" parent="board" instance=ExtResource( 7 )]
+visible = false
+position = Vector2( 530, -2 )
+
+[node name="Pen14" parent="board" instance=ExtResource( 7 )]
+visible = false
+position = Vector2( 1052, -2 )
+
+[node name="Pen21" parent="board" instance=ExtResource( 7 )]
+visible = false
+position = Vector2( -520, 522 )
+
+[node name="Pen22" parent="board" instance=ExtResource( 7 )]
+visible = false
+position = Vector2( 2, 522 )
+
+[node name="Pen23" parent="board" instance=ExtResource( 7 )]
+visible = false
+position = Vector2( 530, 522 )
+
+[node name="Pen24" parent="board" instance=ExtResource( 7 )]
+visible = false
+position = Vector2( 1052, 522 )
+
+[node name="PinkPlayer" parent="." instance=ExtResource( 8 )]
+position = Vector2( 212.632, 1821.42 )
+playerImage = ExtResource( 9 )
+
+[node name="BorgPlayer2" parent="." instance=ExtResource( 8 )]
+position = Vector2( 235, 1010 )
+playerImage = ExtResource( 10 )
+isBorg = true
+
+[node name="BorgPlayer1" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3360, 1010 )
+playerImage = ExtResource( 10 )
+right = true
+isBorg = true
+
+[node name="GreenPlayer" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3389.47, 1806.68 )
+playerImage = ExtResource( 11 )
+right = true
+
+[node name="YellowPlayer" parent="." instance=ExtResource( 8 )]
+position = Vector2( 227.369, 217.211 )
+playerImage = ExtResource( 12 )
+top = true
+
+[node name="BluePlayer" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3391.58, 210.474 )
+playerImage = ExtResource( 13 )
+top = true
+right = true
+
+[node name="prompt" type="Label" parent="."]
+margin_left = 858.0
+margin_top = 1799.0
+margin_right = 2719.0
+margin_bottom = 1997.0
+custom_fonts/font = ExtResource( 14 )
+custom_colors/font_color = Color( 0.52549, 0.509804, 0.788235, 1 )
+text = "ABC
+DEF"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Menu" parent="." instance=ExtResource( 15 )]
+position = Vector2( 1100, 2000 )
+scale = Vector2( 1, 1 )
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="Spin" parent="." instance=ExtResource( 16 )]
+position = Vector2( 1100, 2000 )
+
+[node name="GameOver" parent="." instance=ExtResource( 17 )]
+position = Vector2( 1100, 2000 )
+
+[node name="TitleText" type="Label" parent="."]
+margin_left = 1500.0
+margin_right = 1725.0
+margin_bottom = 297.0
+rect_scale = Vector2( 1.3, 1.3 )
+custom_fonts/font = ExtResource( 14 )
+custom_colors/font_color = Color( 0.52549, 0.509804, 0.788235, 1 )
+text = "TitleText"
+script = ExtResource( 18 )
+
+[node name="Tween" type="Tween" parent="TitleText"]
+
+[node name="BadSheep" type="AnimatedSprite" parent="."]
+position = Vector2( 4400, 1011 )
+scale = Vector2( 0.75, 0.75 )
+frames = ExtResource( 19 )
+frame = 3
+script = ExtResource( 20 )
+
+[node name="Tween" type="Tween" parent="BadSheep"]
+
+[node name="bleat" type="AudioStreamPlayer" parent="BadSheep"]
+stream = ExtResource( 21 )
+
+[node name="PlayerSpot" type="Light2D" parent="."]
+visible = false
+position = Vector2( 195.954, 1832.93 )
+texture = ExtResource( 22 )
+texture_scale = 1.25
+energy = 0.75
+shadow_color = Color( 0, 0, 0, 0.572549 )
+
+[node name="MessageDialog" parent="." instance=ExtResource( 23 )]
+visible = false
+margin_left = 1350.0
+margin_top = -1000.0
+margin_right = 1350.0
+margin_bottom = -1000.0
+
+[node name="click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 24 )
+
+[node name="Fence1" type="Sprite" parent="."]
+visible = false
+position = Vector2( 224.377, 1364.44 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 25 )
+
+[node name="Fence2" type="Sprite" parent="."]
+visible = false
+position = Vector2( 3371.19, 1362.22 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 25 )
+
+[node name="About" parent="." instance=ExtResource( 26 )]
+position = Vector2( 1100, 2000 )
+

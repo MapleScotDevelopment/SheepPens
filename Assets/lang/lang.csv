@@ -1,0 +1,17 @@
+id,en
+FENCE2_PROMPT,Choose where to put your first fence
+BAD_PIGGY_PROMPT,The NAUGHTY SHEEP runs away - miss this turn
+SECOND_FENCE_PROMPT,Choose where to put your second fence
+SINGLE_FENCE_PROMPT,Choose where to put your fence
+Start,START
+Congratulations,Congratulations
+WinnerText,You are the\nwinner
+Menu,menu
+Spin,spin
+TitleText,Sheep Pens
+Player Name,PlayerName
+Ok,OK
+Rate,rate
+Yes,Yes
+No,No
+AboutText,[b][center][color=#8682c9]{Rules}[/color][/center][/b]\n\n1. Each Player picks a colour of Sheep and is given\n\n	6 sheep for a 2 player game\n	5 sheep for a 3 player game\n	4 sheep for a 4 player game\n\n2. Play starts with the pink sheep and moves clockwise\n\n3. Each player takes a turn going to the barn to get a fence piece. Spin the spinner to find out what you get from the barn.\n	* 1 Fence piece - Take a fence piece and place it on the board at the edge of a square\n	* 2 Fence pieces - Take 2 fence pieces and place them on the board at the edges of squares\n	* Bad Sheep - The bad sheep runs away - miss this turn\n\n	\n4. Closing a pen\n	- If you can place a fence piece to finish a square then you win that square \n	- 1 of your sheep will jump in that square and BAA with satisfaction!\n\n5. The winner is the first player to pen all of their sheep.\n\n[b][center][color=#8682c9]{Strategy}[/color][/center][/b]\n\nIt's a good idea not to give pens away. Try to place your fences so that the next player can't steal a pen from you.\n\nIt's a good lesson for young children to learn\n\n[center][url="http://maple.scot/"][color=#8682c9]MapleScot Homepage[/color][/url][/center]\n\n[b][center][color=#8682c9]{Source}[/color][/center][/b]\n\nI started making this video game because I wanted to learn Godot.\n\nI don't really own the concept of the game and I'm not trying to make any money from it which is why the game is free on all platforms.\n\nAs I'm trying to learn I have also made the source code to the game available online at [color=#8682c9][url="https://github.com/MapleScotDevelopment/SheepPens"]Github[/url][/color]\n\nIf you wish to contact me about the game you can do so on twitter [color=#8682c9][url="https://twitter.com/JamesADurie"]@JamesADurie[/url][/color] or email: [color=#8682c9][url]mailto:james@maple.scot[/url][/color]

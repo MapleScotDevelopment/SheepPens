@@ -1,0 +1,11 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=2]
+
+[sub_resource type="StreamTexture" id=1]
+flags = 4
+load_path = "res://.import/button_normal.9.png-ea41898da2ca2828fcab74bfcbee7727.stex"
+
+[resource]
+texture = SubResource( 1 )
+region_rect = Rect2( 0, 0, 203, 102 )
+modulate_color = Color( 0.352035, 0.785156, 0.390322, 1 )
+

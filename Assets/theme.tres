@@ -1,0 +1,8 @@
+[gd_resource type="Theme" load_steps=2 format=2]
+
+[ext_resource path="res://Assets/fonts/bubblegum.tres" type="DynamicFont" id=1]
+
+[resource]
+resource_name = "default"
+default_font = ExtResource( 1 )
+

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/UI_Click_Tap_Knock_Subtle_Dark_mono.wav-d217301632860a05571ec025e711f85f.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/UI_Click_Tap_Knock_Subtle_Dark_mono.wav"
+dest_files=[ "res://.import/UI_Click_Tap_Knock_Subtle_Dark_mono.wav-d217301632860a05571ec025e711f85f.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

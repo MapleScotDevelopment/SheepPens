@@ -1,0 +1,156 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Scripts/About.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Images/MinBarn.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Images/button_normal.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Images/button_highlight.png" type="Texture" id=4]
+[ext_resource path="res://Assets/fonts/bubblegum.tres" type="DynamicFont" id=5]
+[ext_resource path="res://Assets/fonts/SF-Pro-Display-Regular.tres" type="DynamicFont" id=6]
+[ext_resource path="res://Assets/Images/DialogBack.png" type="Texture" id=7]
+
+[node name="About" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="barn" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 2 )
+
+[node name="OkButton" type="TextureButton" parent="."]
+margin_left = 836.335
+margin_top = 1869.54
+margin_right = 1236.33
+margin_bottom = 1999.54
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 3 )
+texture_hover = ExtResource( 4 )
+expand = true
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="OkButton"]
+margin_right = 397.0
+margin_bottom = 130.0
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 0.52549, 0.509804, 0.788235, 1 )
+text = "Ok"
+align = 1
+valign = 1
+
+[node name="RateButton" type="TextureButton" parent="."]
+margin_left = 254.868
+margin_top = 1869.54
+margin_right = 654.868
+margin_bottom = 1999.54
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 3 )
+texture_hover = ExtResource( 4 )
+expand = true
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="RateButton"]
+margin_right = 400.0
+margin_bottom = 130.0
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 0.52549, 0.509804, 0.788235, 1 )
+text = "Rate"
+align = 1
+valign = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 226.0
+margin_top = 731.0
+margin_right = 1260.0
+margin_bottom = 1804.0
+rect_clip_content = false
+custom_fonts/bold_font = ExtResource( 5 )
+custom_fonts/normal_font = ExtResource( 6 )
+bbcode_enabled = true
+bbcode_text = "[b][center][color=#8682c9]{Rules}[/color][/center][/b]
+
+1. Each Player picks a colour of Sheep and is given
+	
+	6 sheep for a 2 player game
+	5 sheep for a 3 player game
+	4 sheep for a 4 player game
+	
+2. Play starts with the pink sheep and moves clockwise
+
+3. Each player takes a turn going to the barn to get a fence piece. Spin the spinner to find out what you get from the barn.
+	* 1 Fence piece - Take a fence piece and place it on the board at the edge of a square
+	* 2 Fence pieces - Take 2 fence pieces and place them on the board at the edges of squares
+	* Bad Sheep - The bad sheep runs away - miss this turn
+	
+4. Closing a pen
+	- If you can place a fence piece to finish a square then you win that square 
+	- 1 of your sheep will jump in that square and BAA with satisfaction!
+	
+5. The winner is the first player to pen all of their sheep.
+
+[b][center][color=#8682c9]{Strategy}[/color][/center][/b]
+
+It's a good idea not to give pens away. Try to place your fences so that the next player can't steal a pen from you.
+
+It's a good lesson for young children to learn
+
+[b][center][color=#8682c9]{Source}[/color][/center][/b]
+
+I started making this video game because I wanted to learn Godot.
+
+I don't really own the concept of the game and I'm not trying to make any money from it which is why the game is free on all platforms.
+
+As I'm trying to learn I have also made the source code to the game available online at [url=\"https://github.com/MapleScotDevelopment/SheepPens\"]Github[/url]
+
+If you wish to contact me about the game you can do so on twitter [url=\"https://twitter.com/JamesADurie\"]@JamesADurie[/url] or email: [url]mailto:james@maple.scot[/url]
+"
+text = "{Rules}
+
+1. Each Player picks a colour of Sheep and is given
+	
+	6 sheep for a 2 player game
+	5 sheep for a 3 player game
+	4 sheep for a 4 player game
+	
+2. Play starts with the pink sheep and moves clockwise
+
+3. Each player takes a turn going to the barn to get a fence piece. Spin the spinner to find out what you get from the barn.
+	* 1 Fence piece - Take a fence piece and place it on the board at the edge of a square
+	* 2 Fence pieces - Take 2 fence pieces and place them on the board at the edges of squares
+	* Bad Sheep - The bad sheep runs away - miss this turn
+	
+4. Closing a pen
+	- If you can place a fence piece to finish a square then you win that square 
+	- 1 of your sheep will jump in that square and BAA with satisfaction!
+	
+5. The winner is the first player to pen all of their sheep.
+
+{Strategy}
+
+It's a good idea not to give pens away. Try to place your fences so that the next player can't steal a pen from you.
+
+It's a good lesson for young children to learn
+
+{Source}
+
+I started making this video game because I wanted to learn Godot.
+
+I don't really own the concept of the game and I'm not trying to make any money from it which is why the game is free on all platforms.
+
+As I'm trying to learn I have also made the source code to the game available online at Github
+
+If you wish to contact me about the game you can do so on twitter @JamesADurie or email: mailto:james@maple.scot
+"
+
+[node name="TextureRect" type="TextureRect" parent="RichTextLabel"]
+self_modulate = Color( 0.207843, 0.184314, 0.184314, 1 )
+show_behind_parent = true
+margin_right = 1050.0
+margin_bottom = 1110.0
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 1
+
+[connection signal="pressed" from="OkButton" to="." method="_on_OkButton_pressed"]
+[connection signal="pressed" from="RateButton" to="." method="_on_RateButton_pressed"]
+[connection signal="meta_clicked" from="RichTextLabel" to="." method="_on_RichTextLabel_meta_clicked"]

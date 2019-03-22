@@ -1,0 +1,11 @@
+[gd_resource type="DynamicFont" load_steps=2 format=2]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://Assets/fonts/Bubblegum.ttf"
+
+[resource]
+size = 90
+outline_size = 2
+outline_color = Color( 0.964706, 0.933333, 0.207843, 1 )
+font_data = SubResource( 1 )
+

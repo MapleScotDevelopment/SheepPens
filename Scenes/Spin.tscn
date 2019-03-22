@@ -1,0 +1,94 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Scripts/Spin.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Images/MinBarn.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Images/ExitButton.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Images/MinPinkSheep.png" type="Texture" id=4]
+[ext_resource path="res://Assets/fonts/bubblegum.tres" type="DynamicFont" id=5]
+[ext_resource path="res://Assets/Images/button_normal.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Images/button_highlight.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Images/minspinner.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Images/arrow.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Sounds/SpinStart.wav" type="AudioStream" id=10]
+[ext_resource path="res://Assets/Sounds/Spin.wav" type="AudioStream" id=11]
+[ext_resource path="res://Assets/Sounds/SpinStop.wav" type="AudioStream" id=12]
+
+[node name="Spin" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Barn" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 2 )
+
+[node name="ExitButton" type="TextureButton" parent="."]
+margin_left = 668.897
+margin_top = 87.8818
+margin_right = 812.897
+margin_bottom = 291.882
+texture_normal = ExtResource( 3 )
+
+[node name="PlayerImage" type="TextureRect" parent="."]
+margin_left = 474.0
+margin_top = 316.0
+margin_right = 954.0
+margin_bottom = 796.0
+texture = ExtResource( 4 )
+
+[node name="PlayerName" type="Label" parent="."]
+margin_left = 159.322
+margin_top = 744.208
+margin_right = 1329.32
+margin_bottom = 841.208
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 0.52549, 0.509804, 0.788235, 1 )
+text = "PLAYER NAME ABCDEFGHIJKL"
+align = 1
+valign = 1
+
+[node name="SpinButton" type="TextureButton" parent="."]
+margin_left = 471.798
+margin_top = 865.331
+margin_right = 1021.8
+margin_bottom = 1045.33
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 6 )
+texture_hover = ExtResource( 7 )
+expand = true
+stretch_mode = 6
+
+[node name="ButtonText" type="Label" parent="SpinButton"]
+margin_left = 123.516
+margin_top = 26.0
+margin_right = 321.516
+margin_bottom = 123.0
+rect_scale = Vector2( 1.5, 1.5 )
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 0.52549, 0.509804, 0.788235, 1 )
+text = "SPIN"
+
+[node name="Spinner" type="TextureRect" parent="."]
+margin_left = 259.419
+margin_top = 1056.68
+margin_right = 1219.42
+margin_bottom = 2016.68
+texture = ExtResource( 8 )
+
+[node name="Arrow" type="Sprite" parent="Spinner"]
+position = Vector2( 477.134, 481.729 )
+scale = Vector2( 1.75, 1.75 )
+texture = ExtResource( 9 )
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="spinStart" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+
+[node name="spin" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+
+[node name="spinStop" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
+
+[connection signal="pressed" from="ExitButton" to="." method="_on_ExitButton_pressed"]
+[connection signal="pressed" from="SpinButton" to="." method="_on_SpinButton_pressed"]

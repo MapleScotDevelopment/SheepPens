@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/AUDIENCE_Claps_and_Cheers_stereo.wav-fa6fb615336c7a63b17734ffd08ffbb3.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/AUDIENCE_Claps_and_Cheers_stereo.wav"
+dest_files=[ "res://.import/AUDIENCE_Claps_and_Cheers_stereo.wav-fa6fb615336c7a63b17734ffd08ffbb3.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

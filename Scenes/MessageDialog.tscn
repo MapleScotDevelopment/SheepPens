@@ -1,0 +1,90 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Scripts/MessageDialog.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Images/DialogBack.png" type="Texture" id=2]
+[ext_resource path="res://Assets/fonts/bubblegum.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Assets/fonts/SF-Pro-Display-Regular.tres" type="DynamicFont" id=4]
+[ext_resource path="res://Assets/Images/button_normal.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Images/button_highlight.png" type="Texture" id=6]
+
+[node name="MessageDialog" type="Control"]
+margin_right = 975.0
+margin_bottom = 555.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+script = ExtResource( 1 )
+
+[node name="Background" type="TextureRect" parent="."]
+modulate = Color( 0.882353, 0.439216, 0.960784, 1 )
+margin_right = 975.0
+margin_bottom = 555.0
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 1
+
+[node name="Title" type="Label" parent="."]
+margin_right = 957.0
+margin_bottom = 115.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0.52549, 0.509804, 0.788235, 1 )
+text = "title text"
+align = 1
+valign = 1
+
+[node name="Message" type="Label" parent="."]
+margin_left = 18.0
+margin_top = 100.0
+margin_right = 480.0
+margin_bottom = 278.0
+rect_scale = Vector2( 2, 2 )
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "sample message text"
+align = 1
+autowrap = true
+
+[node name="AcceptButton" type="TextureButton" parent="."]
+margin_left = 523.0
+margin_top = 386.0
+margin_right = 923.0
+margin_bottom = 516.0
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 5 )
+texture_hover = ExtResource( 6 )
+expand = true
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="AcceptButton"]
+margin_right = 400.0
+margin_bottom = 130.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0.52549, 0.509804, 0.788235, 1 )
+text = "ACCEPT"
+align = 1
+valign = 1
+
+[node name="DeclineButton" type="TextureButton" parent="."]
+margin_left = 42.0
+margin_top = 386.0
+margin_right = 442.0
+margin_bottom = 516.0
+mouse_filter = 1
+texture_normal = ExtResource( 5 )
+texture_hover = ExtResource( 6 )
+expand = true
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="DeclineButton"]
+margin_right = 400.0
+margin_bottom = 130.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0.52549, 0.509804, 0.788235, 1 )
+text = "DECLINE"
+align = 1
+valign = 1
+
+[node name="Tween" type="Tween" parent="."]
+
+[connection signal="pressed" from="AcceptButton" to="." method="_on_AcceptButton_pressed"]
+[connection signal="pressed" from="DeclineButton" to="." method="_on_DeclineButton_pressed"]
